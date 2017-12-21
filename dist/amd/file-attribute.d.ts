@@ -1,5 +1,5 @@
 export declare class FilesAttribute {
-    private element;
+    element: Element;
     onLoaded: Function;
     onProgress: Function;
     onError: Function;
