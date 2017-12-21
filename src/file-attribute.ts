@@ -16,7 +16,7 @@ export class FilesAttribute {
 
     private fileHandler : FileHandler;
 
-    constructor(private element: Element) { }
+    constructor(public element: Element) { }
 
     public bind() {
         if (!this.onLoaded) {
