@@ -1,6 +1,6 @@
 `au-files` is a typescript rewrite of [aurelia-files](https://github.com/grofit/aurelia-files). This project borrows code from aurelia-files.
 
-The required notice from the aurelia-files project.
+The required notice from the `aurelia-files` project.
 
 ---
 
