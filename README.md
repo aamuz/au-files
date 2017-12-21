@@ -18,7 +18,7 @@ then in Aurelia application entry file
 
 `aurelia.use.plugin("au-files");`
 
-## Example
+## Usage
 
 ### Textual Examples
 
@@ -56,3 +56,17 @@ The available options for this binding are:
 * **read-as** - to indicate how you want to read the file, options are (text, image, binary, array), the default behaviour is image
 * **allow-drop** - to indicate you want to enable drag and drop functionality for files on this element
 * **hover-class** - the class to apply when you are hovering a file over the drag and drop compatible dropzone
+
+## Building
+
+```shell
+	npm run build
+```
+
+## Publishing
+
+1. Bump the version
+```shell
+npm run bump-version [newversion> | major | minor | patch]
+```
+2. Commit, tag, npm publish (not automated)
