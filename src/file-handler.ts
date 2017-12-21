@@ -12,7 +12,7 @@ export class FileHandler {
         private hoverClass: any = "file-hover"
     ) { }
 
-    public readFile(file: any) {
+    public readFile = (file: any) => {
         const reader = FileReaderHelper.createReader(file, this.onLoaded, this.onProgress, this.onError);
 
         switch (this.readAs) {
@@ -30,7 +30,7 @@ export class FileHandler {
         }
     }
 
-    public handleFileDrag(fileDragEvent: any) {
+    public handleFileDrag = (fileDragEvent: any) => {
         fileDragEvent.stopPropagation();
         fileDragEvent.preventDefault();
 
@@ -41,12 +41,12 @@ export class FileHandler {
         }
     }
 
-    public handleDrop(fileDropEvent: any) {
+    public handleDrop = (fileDropEvent: any) => {
         this.handleFileDrag(fileDropEvent);
         this.handleFileSelected(fileDropEvent);
     }
 
-    public handleFileSelected(fileSelectedEvent: any) {
+    public handleFileSelected = (fileSelectedEvent: any) => {
         const files = fileSelectedEvent.target.files || fileSelectedEvent.dataTransfer.files;
         for (let i = 0, f; f = files[i]; i++) {
             if (this.fileFilter && !f.type.match(this.fileFilter)) {
