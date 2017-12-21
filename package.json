@@ -1,0 +1,32 @@
+{
+  "name": "au-files",
+  "version": "0.1.0",
+  "description": "Aurelia files plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamuz/au-files.git"
+  },
+  "keywords": [
+    "aurelia",
+    "files"
+  ],
+  "author": "Amuz Tamrakar",
+  "license": "MT",
+  "bugs": {
+    "url": "https://github.com/aamuz/au-files/issues"
+  },
+  "homepage": "https://github.com/aamuz/au-files#readme",
+  "dependencies": {
+    "aurelia-framework": "^1.1.5"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  }
+}
