@@ -12,7 +12,7 @@ This plugin is based on [aurelia-files](https://github.com/grofit/aurelia-files)
 
 ### With `yarn`
 
-`yard add au-files`
+`yarn add au-files`
 
 then in Aurelia application entry file
 
