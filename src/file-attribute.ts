@@ -1,8 +1,8 @@
-import { autoinject, customAttribute, bindable } from 'aurelia-framework';
+import { inject, customAttribute, bindable } from 'aurelia-framework';
 import { FileHandler } from './file-handler';
 
 @customAttribute('au-files')
-@autoinject()
+@inject(Element)
 export class FilesAttribute {
 
     @bindable() onLoaded: Function;
