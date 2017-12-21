@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { autoinject, customAttribute, bindable } from 'aurelia-framework';
+import { inject, customAttribute, bindable } from 'aurelia-framework';
 import { FileHandler } from './file-handler';
 var FilesAttribute = /** @class */ (function () {
     function FilesAttribute(element) {
@@ -56,7 +56,7 @@ var FilesAttribute = /** @class */ (function () {
     ], FilesAttribute.prototype, "hoverClass", void 0);
     FilesAttribute = __decorate([
         customAttribute('au-files'),
-        autoinject()
+        inject(Element)
     ], FilesAttribute);
     return FilesAttribute;
 }());

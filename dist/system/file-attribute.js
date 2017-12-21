@@ -68,7 +68,7 @@ System.register(["aurelia-framework", "./file-handler"], function (exports_1, co
                 ], FilesAttribute.prototype, "hoverClass", void 0);
                 FilesAttribute = __decorate([
                     aurelia_framework_1.customAttribute('au-files'),
-                    aurelia_framework_1.autoinject()
+                    aurelia_framework_1.inject(Element)
                 ], FilesAttribute);
                 return FilesAttribute;
             }());
