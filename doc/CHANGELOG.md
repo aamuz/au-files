@@ -2,4 +2,4 @@
 
 ### all
 
-* Intial release
+* Initial release

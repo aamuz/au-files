@@ -1,11 +1,11 @@
 export declare class FileHandler {
-    private onLoaded;
-    private onProgress;
-    private onError;
-    private fileFilter;
-    private maxFileSize;
-    private readAs;
-    private hoverClass;
+    onLoaded: any;
+    onProgress: any;
+    onError: any;
+    fileFilter: any;
+    maxFileSize: any;
+    readAs: any;
+    hoverClass: any;
     constructor(onLoaded: any, onProgress: any, onError: any, fileFilter: any, maxFileSize: any, readAs: any, hoverClass?: any);
     readFile: (file: any) => void;
     handleFileDrag: (fileDragEvent: any) => void;

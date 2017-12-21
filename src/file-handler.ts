@@ -3,13 +3,13 @@ import { FileReaderHelper } from "./file-reader-helper";
 export class FileHandler {
 
     constructor(
-        private onLoaded: any,
-        private onProgress: any,
-        private onError: any,
-        private fileFilter: any,
-        private maxFileSize: any,
-        private readAs: any,
-        private hoverClass: any = "file-hover"
+        public onLoaded: any,
+        public onProgress: any,
+        public onError: any,
+        public fileFilter: any,
+        public maxFileSize: any,
+        public readAs: any,
+        public hoverClass: any = "file-hover"
     ) { }
 
     public readFile = (file: any) => {
@@ -27,6 +27,7 @@ export class FileHandler {
                 break;
             default:
                 reader.readAsDataURL(file);
+                break;
         }
     }
 
@@ -62,6 +63,8 @@ export class FileHandler {
                 }
                 continue;
             }
+
+            this.readFile(f);
         }
     }
 }

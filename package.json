@@ -1,6 +1,6 @@
 {
   "name": "au-files",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Aurelia files plugin",
   "main": "dist/commonjs/index.js",
   "scripts": {
@@ -51,6 +51,7 @@
     "aurelia-framework": "^1.1.5"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "cross-env": "^5.1.1",
     "rimraf": "^2.6.2",
     "tslint": "^5.8.0",

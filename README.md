@@ -67,6 +67,6 @@ The available options for this binding are:
 
 1. Bump the version
 ```shell
-npm run bump-version [newversion> | major | minor | patch]
+npm run bump-version [<newversion> | major | minor | patch]
 ```
 2. Commit, tag, npm publish (not automated)

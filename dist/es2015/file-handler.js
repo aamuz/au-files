@@ -9,6 +9,7 @@ export class FileHandler {
         this.readAs = readAs;
         this.hoverClass = hoverClass;
         this.readFile = (file) => {
+            console.log('readfile', file, this.readAs);
             const reader = FileReaderHelper.createReader(file, this.onLoaded, this.onProgress, this.onError);
             switch (this.readAs) {
                 case 'text':
@@ -21,7 +22,9 @@ export class FileHandler {
                     reader.readAsBinaryString(file);
                     break;
                 default:
+                    console.log('default hit');
                     reader.readAsDataURL(file);
+                    break;
             }
         };
         this.handleFileDrag = (fileDragEvent) => {
@@ -39,6 +42,7 @@ export class FileHandler {
             this.handleFileSelected(fileDropEvent);
         };
         this.handleFileSelected = (fileSelectedEvent) => {
+            console.log('handleFileSelected', fileSelectedEvent);
             const files = fileSelectedEvent.target.files || fileSelectedEvent.dataTransfer.files;
             for (let i = 0, f; f = files[i]; i++) {
                 if (this.fileFilter && !f.type.match(this.fileFilter)) {
@@ -53,6 +57,7 @@ export class FileHandler {
                     }
                     continue;
                 }
+                this.readFile(f);
             }
         };
     }

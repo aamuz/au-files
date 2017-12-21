@@ -13,6 +13,7 @@ var FileHandler = /** @class */ (function () {
         this.readAs = readAs;
         this.hoverClass = hoverClass;
         this.readFile = function (file) {
+            console.log('readfile', file, _this.readAs);
             var reader = file_reader_helper_1.FileReaderHelper.createReader(file, _this.onLoaded, _this.onProgress, _this.onError);
             switch (_this.readAs) {
                 case 'text':
@@ -25,7 +26,9 @@ var FileHandler = /** @class */ (function () {
                     reader.readAsBinaryString(file);
                     break;
                 default:
+                    console.log('default hit');
                     reader.readAsDataURL(file);
+                    break;
             }
         };
         this.handleFileDrag = function (fileDragEvent) {
@@ -43,6 +46,7 @@ var FileHandler = /** @class */ (function () {
             _this.handleFileSelected(fileDropEvent);
         };
         this.handleFileSelected = function (fileSelectedEvent) {
+            console.log('handleFileSelected', fileSelectedEvent);
             var files = fileSelectedEvent.target.files || fileSelectedEvent.dataTransfer.files;
             for (var i = 0, f = void 0; f = files[i]; i++) {
                 if (_this.fileFilter && !f.type.match(_this.fileFilter)) {
@@ -57,6 +61,7 @@ var FileHandler = /** @class */ (function () {
                     }
                     continue;
                 }
+                _this.readFile(f);
             }
         };
     }
